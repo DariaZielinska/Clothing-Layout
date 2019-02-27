@@ -1,0 +1,164 @@
+@import '_variables.scss';
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.selector-for-some-widget{
+  box-sizing: content-box;
+}
+
+html{
+  font-size: 62.5%;
+}
+
+body{
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* -------- PAGE HEADER ----------*/
+
+.page_header{
+  text-align: center;
+  white-space: nowrap;
+  margin: 20px 0 0 0;
+  h1{
+    font-weight: 700;
+    position: relative;
+  }
+  h1:before{
+    content: "\2022";
+    font-size: 2.7rem;
+    color: $primary;
+    position: absolute;
+    top: -17px;
+    left: calc(50% - 32px)
+  }
+  label{
+    position: relative;
+    margin: 15px 0;
+    input{
+      border: 1px solid transparent;
+      background-color: #F0F0F0;
+      border-radius: 20px;
+      box-shadow: none;
+      padding: 10px;
+      width: 80vw;
+    }
+    i{
+      position: absolute;
+      top: 7px;
+      right: 15px;
+      font-size: 2rem;
+      cursor: pointer;
+    }
+  }
+
+  .header_user{
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+    i,p{
+      cursor: pointer;
+    }
+    p{
+      font-size: 1.2rem;
+      line-height: 20px;
+      position: relative;
+    }
+    i{
+      font-size: 2.2rem;
+      padding: 0 5px 0 15px;
+    }
+    p:nth-of-type(2):before{
+      content: "\2022";
+      color: $primary;
+      position: absolute;
+      font-size: 8rem;
+      left: -17px;
+      bottom: 16px;
+    }
+    p:nth-of-type(2):after{
+      content: "0";
+      color: $white;
+      position: absolute;
+      font-size: 1rem;
+      font-weight: 500;
+      left: -8.5px;
+      bottom: 10px;
+    }
+  }
+
+  nav{
+    .header_nav{
+      padding: 9px 20px;
+      background-color: $secondary;
+      color: $white;
+      font-size: 1.5rem;
+    }
+    .hamburger-menu{
+      display: flex;
+      justify-content: flex-end;
+      p{
+        margin-bottom: 0;
+        cursor: pointer;
+      }
+    }
+    .hamburger{
+      padding-top: 3px;
+      padding-left: 5px;
+      cursor: pointer;
+    }
+    .bar1, .bar2, .bar3 {
+      width: 15px;
+      height: 1px;
+      background-color: $white;
+      margin: 3px 2px;
+    }
+
+
+    .header_menu{
+      list-style: none;
+      background-color: $secondary;
+      color: $white;
+      padding-bottom: 10px;
+      margin-bottom: 0;
+      li{
+        padding: 5px 20px;
+        text-align: left;
+        font-size: 1.2rem;
+        font-weight: 500;
+        cursor: pointer;
+      }
+    }
+
+    .header_menu.open{
+      display: block;
+    }
+  }
+}
+
+/* CAROUSEL */
+
+
+.carousel-inner{
+  div{
+    background-image: url("../images/carousel1.jpg");
+    background-size: cover;
+    background-position: 50%;
+    height: 40vh;
+  }
+  div:nth-of-type(2){
+    background-image: url("../images/carousel2.jpg");
+  }
+  div:nth-of-type(3){
+    background-image: url("../images/carousel3.jpg");
+  }
+}
+
+.ccc{
+  background-color: #282828;
+  height: 10vh;
+}

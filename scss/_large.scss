@@ -1,0 +1,29 @@
+@import '_variables.scss';
+
+@media (min-width: 992px) {
+
+  .header_logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    label{
+      margin: 0 30px;
+      input{
+        width: 30vw;
+      }
+    }
+  }
+  .header_user{
+    padding-top: 10px;
+  }
+
+  .carousel-inner{
+    div{
+      height: 78vh;
+    }
+  }
+
+
+}
+
+
