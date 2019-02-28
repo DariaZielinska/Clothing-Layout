@@ -18,6 +18,30 @@ body{
   font-family: 'Montserrat', sans-serif;
 }
 
+/* ---------- ANIMATIONS ----------*/
+
+@keyframes rotation {
+  0%{
+    transform: rotate(20deg);
+  }
+  20%{
+    transform: rotate(-20deg);
+  }
+  40%{
+    transform: rotate(20deg);
+  }
+  60%{
+    transform: rotate(-20deg);
+  }
+  80%{
+    transform: rotate(20deg);
+  }
+  100%{
+    transform: rotate(0deg);
+  }
+}
+
+
 /* -------- PAGE HEADER ----------*/
 
 .page_header{
@@ -64,7 +88,7 @@ body{
       cursor: pointer;
     }
     p{
-      font-size: 1.2rem;
+      font-size: 1rem;
       line-height: 20px;
       position: relative;
     }
@@ -142,23 +166,104 @@ body{
 
 /* CAROUSEL */
 
+.page_slider{
+  .carousel-inner{
+    .carousel-item{
+      background-image: url("../images/carousel1.jpg");
+      background-size: cover;
+      background-position: 50%;
+      height: 60vh;
+      div{
+        color: $white;
+        p:nth-of-type(1){
+          letter-spacing: 7px;
+          font-weight: 500;
+          margin-bottom: 0;
+        }
+        p:nth-of-type(2){
+          text-align: justify;
+        }
+        button{
+          border: 1px solid $white;
+          background-color: transparent;
+          padding: 10px;
+          border-radius: 30px;
+          width: 110px;
+          color: $white;
+          font-weight: 500;
+        }
+        button:nth-of-type(2){
+          background-color: $white;
+          color: #000;
+        }
+        .carousel-promo{
+          font-weight: bolder;
+          width: 160px;
+          height: 160px;
+          position: absolute;
+          border-radius: 90%;
+          top: 40px;
+          right: 100px;
+          z-index: 1;
+          background-color: $primary;
+          padding-top: 12px;
+          animation: rotation 900ms ease-in;
+          p{
+            text-align: center;
+            color: white;
+            font-size: 1.5rem;
+            letter-spacing: 0;
+            padding: 0;
+            margin: 0;
+          }
+          p:nth-of-type(1){
+            font-size: 1.2rem;
 
-.carousel-inner{
-  div{
-    background-image: url("../images/carousel1.jpg");
-    background-size: cover;
-    background-position: 50%;
-    height: 40vh;
-  }
-  div:nth-of-type(2){
-    background-image: url("../images/carousel2.jpg");
-  }
-  div:nth-of-type(3){
-    background-image: url("../images/carousel3.jpg");
+          }
+          p:nth-of-type(2){
+            font-size: 6rem;
+            margin-bottom: 0;
+            padding-top: -15px;
+          }
+        }
+        .carousel-promo:after{
+          content: "";
+          border: 1px solid #F9599c;
+          width: 150px;
+          height: 150px;
+          border-radius: 90%;
+          position: absolute;
+          top: 5px;
+          left: 5px;
+        }
+      }
+    }
+    div:nth-of-type(2){
+      background-image: url("../images/carousel2.jpg");
+    }
+    div:nth-of-type(3){
+      background-image: url("../images/carousel3.jpg");
+    }
   }
 }
 
-.ccc{
-  background-color: #282828;
-  height: 10vh;
+
+.page_advantages{
+  background-color: #F8F8F8;
+  h4{
+    color: #000000;
+    text-align: center;
+    padding: 20px 0;
+    font-weight: 600;
+    i{
+      color: $secondary;
+    }
+  }
+  h4:nth-of-type(2){
+    background-color: $primary;
+    color: $white;
+    i{
+      color: $white;
+    }
+  }
 }
