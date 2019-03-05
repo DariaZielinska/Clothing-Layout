@@ -1,7 +1,7 @@
 # Clothing Layout
 
 ## About:
-Still working on RWD website using bootstrap and jQuery. 
+Clothing Layout is finished RWD tempplate made with Bootstrap and jQuery. 
 
 ## Available on:
 https://dariazielinska.github.io/Clothing-Layout/
