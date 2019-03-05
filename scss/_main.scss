@@ -314,7 +314,7 @@ body{
         text-align: center;
         cursor: pointer;
         position: absolute;
-        bottom: 50px;
+        bottom: calc(13% - 10px);
         transition: width 200ms ease-in;
         i{
           font-size: 1.60rem;
@@ -322,10 +322,10 @@ body{
         }
       }
       span:nth-of-type(1){
-        right: 70px;
+        right: calc(50% - 70px);
       }
       span:nth-of-type(2){
-        right: 35px;
+        right: calc(50% - 105px);
       }
 
       span:nth-of-type(1):hover{
@@ -373,6 +373,202 @@ body{
     }
     div:nth-of-type(8){
       background-image: url("../images/3.jpg");
+    }
+  }
+}
+
+.page_ads{
+  background-image: url("../images/showing.jpg");
+  width: 90vw;
+  margin: 20px auto;
+  height: 30vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: 50%;
+  div{
+    position: relative;
+    height: 40vh;
+    width: 90vw;
+    h6{
+      position: absolute;
+    }
+    h6:nth-of-type(3){
+      color: #fff;
+      background-color: $primary;
+      border-radius: 90px;
+      width: 140px;
+      text-align: center;
+      padding: 8px;
+      cursor: pointer;
+    }
+  }
+  div:after{
+    content: "NEW";
+    background-color: #50E550;
+    color: #fff;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    border-radius: 90px;
+    padding: 0 15px;
+    font-size: 1.5rem;
+    font-weight: bolder;
+  }
+}
+
+footer{
+  background-color: $secondary;
+  color: #8F8F8F;
+  .footer_logo{
+    text-align: center;
+    font-weight: 700;
+    position: relative;
+    font-size: 2.7rem;
+    color: $white;
+    padding: 40px;
+  }
+  .footer_logo:before{
+    content: "\2022";
+    font-size: 2.7rem;
+    color: $primary;
+    position: absolute;
+    top: 22.5px;
+    left: calc(50% - 34.2px)
+  }
+  .footer_container{
+    padding-left: 10px;
+
+    h6{
+      color: $white;
+      font-size: 1.7rem;
+      font-weight: 600;
+    }
+
+    div:nth-of-type(2){   //COMPANY SECTION
+      .company_links{
+        display: flex;
+        li{
+          list-style: none;
+          padding: 5px 30px;
+          cursor: pointer;
+          position: relative;
+        }
+        li:before{
+          content: "";
+          border: 1px solid $primary;
+          width: 5px;
+          height: 5px;
+          border-radius: 50%;
+          position: absolute;
+          left: 5px;
+          top: calc(50% - 2.5px);
+        }
+        li:hover{
+          color: $white;
+        }
+        li:hover::before{
+          background-color: $primary;
+        }
+      }
+    }
+
+    div:nth-of-type(3){    //NEWS SECTION
+      ul{
+        position: relative;
+        margin-left: 60px;
+      }
+      ul:before{
+        content: "";
+        background-image: url("../images/carousel1.jpg");
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 50%;
+        left: -60px;
+      }
+      li{
+        list-style: none;
+      }
+      li:nth-of-type(1){
+        font-size: 1.4rem;
+        font-weight: bolder;
+        color: #4b4b4b;
+      }
+      li:nth-of-type(3){
+        color: $primary;
+        font-weight: bolder;
+        cursor: pointer;
+      }
+      li:nth-of-type(3):hover{
+        color: #fff;
+      }
+    }
+
+    div:nth-of-type(4){    //CONTACT SECTION
+      li{
+        list-style: none;
+        padding: 10px 0;
+      }
+      li:before{
+        content: "C.";
+        color: $primary;
+        padding-right: 10px;
+      }
+      li:nth-of-type(2):before{
+        content: "A.";
+      }
+      li:nth-of-type(3):before{
+        content: "T.";
+      }
+      li:nth-of-type(4):before{
+        content: "E.";
+      }
+    }
+  }
+
+  .footer_social{
+    border-top: 1px solid #4b4b4b;
+    padding-top: 50px;
+    div{
+      text-align: center;
+      width: 100vw;
+    }
+    i{
+      font-size: 3rem;
+      color: #fff;
+      transition: color 500ms;
+      padding: 7px;
+      cursor: pointer;
+    }
+    i:nth-of-type(1):hover{
+      color: #5F53C4;
+    }
+    i:nth-of-type(2):hover{
+      color: #C1463A;
+    }
+    i:nth-of-type(3):hover{
+      color: #3B5A9D;
+    }
+    i:nth-of-type(4):hover{
+      color: #B9051D;
+    }
+    i:nth-of-type(5):hover{
+      color: #52A7E7;
+    }
+    i:nth-of-type(6):hover{
+      color: #C90600;
+    }
+    i:nth-of-type(7):hover{
+      color: #000000;
+    }
+
+    p{
+      color: #fff;
+      padding: 30px;
+      text-align: center;
+      font-weight: bolder;
     }
   }
 }

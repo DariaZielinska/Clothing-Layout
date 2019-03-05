@@ -45,6 +45,25 @@
     }
   }
 
+  .page_ads {
+    div{
+      h6:nth-of-type(1){
+        top: calc(20% - 10px);
+        right: calc(20% - 20px);
+      }
+      h6:nth-of-type(2){
+        top: calc(30% - 20px);
+        font-size: 2rem;
+        font-weight: 600;
+        max-width: 100px;
+        right: calc(15% - 25px);
+      }
+      h6:nth-of-type(3){
+        top: calc(60% - 30px);
+        right: calc(5% - 1px);
+      }
+    }
+  }
 
 }
 
